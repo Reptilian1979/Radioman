@@ -22,11 +22,9 @@ public class Radio {
     public void setActiveFrequency(int activeFrequency) {
 
         if (activeFrequency < firstStep) {
-            activeFrequency = firstStep;
             return;
         }
         if (activeFrequency > numberOfFrequencies) {
-            activeFrequency = firstStep;
             return;
         }
         this.activeFrequency = activeFrequency;
@@ -50,11 +48,9 @@ public class Radio {
 
     public void setActiveVolume() {
         if (activeVolume < firstStep) {
-            activeVolume = firstStep;
             return;
         }
         if (activeVolume > numberOfVolumeSteps) {
-            activeVolume = firstStep;
             return;
         }
         this.activeVolume = activeVolume;

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class RadioTests {
 
     @Test
-    void shouldControlFrequencyLine() {
+    void shouldControlFrequencyLineOverUpperLimit() {
         Radio radio = new Radio();
         radio.setActiveFrequency(22);
         int expected = 0;
@@ -14,6 +14,16 @@ public class RadioTests {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    void shouldControlFrequencyLineUnderFirstStep() {
+        Radio radio = new Radio();
+        radio.setActiveFrequency(-22);
+        int expected = 0;
+        int actual = radio.getActiveFrequency();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     void shouldScrollFrequencyUp() {
         Radio radio = new Radio();
         radio.setActiveFrequency(3);
