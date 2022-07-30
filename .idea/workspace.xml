@@ -35,19 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_directory_selection": "C:/Users/madan/IdeaProjects/Radioman/src/main/java",
-    "last_opened_file_path": "C:/Users/madan/IdeaProjects/StatServiceCI"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/madan/IdeaProjects/Radioman/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/madan/IdeaProjects/Post&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean test" />
       <command value="mvn clean install" />
       <command value="mvn site" />
+      <command value="mvn clean test" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.RadioTests">
@@ -66,7 +66,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTests.shouldScrollFrequencyDownAtLowerLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTests.setActiveFrequency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -76,13 +76,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
-      <option name="METHOD_NAME" value="shouldScrollFrequencyDownAtLowerLimit" />
+      <option name="METHOD_NAME" value="setActiveFrequency" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTests.shouldScrollFrequencyDownInLimits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTests.shouldControlFrequencyLineInTheEdgeOfUpperLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -92,13 +92,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
-      <option name="METHOD_NAME" value="shouldScrollFrequencyDownInLimits" />
+      <option name="METHOD_NAME" value="shouldControlFrequencyLineInTheEdgeOfUpperLimit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTests.shouldScrollFrequencyUpInLimits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTests.shouldScrollFrequencyInTheEdgeOfLowerLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -108,13 +108,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
-      <option name="METHOD_NAME" value="shouldScrollFrequencyUpInLimits" />
+      <option name="METHOD_NAME" value="shouldScrollFrequencyInTheEdgeOfLowerLimit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTests.shouldScrollVolumeUpInLimits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTests.shouldSetFrequencyDirectlyInLimits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -124,7 +124,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
-      <option name="METHOD_NAME" value="shouldScrollVolumeUpInLimits" />
+      <option name="METHOD_NAME" value="shouldSetFrequencyDirectlyInLimits" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,10 +133,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RadioTests" />
-        <item itemvalue="JUnit.RadioTests.shouldScrollVolumeUpInLimits" />
-        <item itemvalue="JUnit.RadioTests.shouldScrollFrequencyDownAtLowerLimit" />
-        <item itemvalue="JUnit.RadioTests.shouldScrollFrequencyDownInLimits" />
-        <item itemvalue="JUnit.RadioTests.shouldScrollFrequencyUpInLimits" />
+        <item itemvalue="JUnit.RadioTests.shouldControlFrequencyLineInTheEdgeOfUpperLimit" />
+        <item itemvalue="JUnit.RadioTests.shouldSetFrequencyDirectlyInLimits" />
+        <item itemvalue="JUnit.RadioTests.setActiveFrequency" />
+        <item itemvalue="JUnit.RadioTests.shouldScrollFrequencyInTheEdgeOfLowerLimit" />
       </list>
     </recent_temporary>
   </component>

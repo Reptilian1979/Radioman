@@ -18,9 +18,7 @@ public class Radio {
         return activeVolume;
 
     }
-
     public void setActiveFrequency(int activeFrequency) {
-
         if (activeFrequency < firstStep) {
             return;
         }
@@ -30,62 +28,41 @@ public class Radio {
         this.activeFrequency = activeFrequency;
     }
 
-    public void scrollingFrequencyUpInLimits() {
-        if (activeFrequency < numberOfFrequencies) {
-        }
-        activeFrequency++;
-
-    }
-    public void scrollingFrequencyLineOverUpperLimit() {
+    public void nextFrequency() {
         if (activeFrequency >= numberOfFrequencies) {
+            setActiveFrequency(firstStep);
+        } else {
+            setActiveFrequency(activeFrequency = activeFrequency + 1);
         }
-        activeFrequency = firstStep;
     }
 
-    public void scrollingFrequencyDownInLimits() {
-        if (activeFrequency > firstStep) {
-        }
-        activeFrequency--;
-    }
-
-    public void scrollingFrequencyDownAtLowerLimit() {
+    public void previousFrequency() {
         if (activeFrequency <= firstStep) {
+            setActiveFrequency(numberOfFrequencies);
+        } else {
+            setActiveFrequency(activeFrequency = activeFrequency - 1);
         }
-        activeFrequency = numberOfFrequencies;
     }
 
     public void setActiveVolume(int activeVolume) {
-
-        if (activeVolume > numberOfVolumeSteps) {
+        if (activeVolume < firstStep) {
             return;
         }
-        if (activeVolume < firstStep) {
+        if (activeVolume > numberOfVolumeSteps) {
             return;
         }
         this.activeVolume = activeVolume;
     }
 
-    public void scrollingVolumeUpInLimits() {
+    public void turningActiveVolumeUp() {
         if (activeVolume < numberOfVolumeSteps) {
+            activeVolume++;
         }
-        activeVolume++;
-
-    }
-    public void scrollingVolumeLineOverUpperLimit() {
-        if (activeVolume >= numberOfVolumeSteps) {
-        }
-        activeVolume = numberOfVolumeSteps;
     }
 
-    public void scrollingVolumeDownInLimits() {
+    public void downGradingActiveVolume() {
         if (activeVolume > firstStep) {
+            activeVolume--;
         }
-        activeVolume--;
-    }
-
-    public void scrollingVolumeDownAtLowerLimit() {
-        if (activeVolume <= firstStep) {
-        }
-        activeVolume = firstStep;
     }
 }

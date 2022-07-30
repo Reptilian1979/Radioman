@@ -5,84 +5,165 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTests {
 
-   @Test
-   void shouldScrollFrequencyUpInLimits(){
-       Radio radio = new Radio();
-       radio.setActiveFrequency(7);
-       radio.scrollingFrequencyUpInLimits();
-       int expected = 8;
-       int actual = radio.getActiveFrequency();
-       Assertions.assertEquals(expected,actual);
-   }
+    @Test
+    void shouldSetActiveFrequency() {
+        Radio radio = new Radio();
+
+        radio.setActiveFrequency (5);
+        int expected = 5;
+        int actual = radio.getActiveFrequency();
+
+        Assertions.assertEquals(actual, expected);
+    }
 
     @Test
-    void shouldControlFrequencyLineOverUpperLimit() {
+    void shouldSetActiveFrequencyOverUpperLimit() {
         Radio radio = new Radio();
-        radio.setActiveFrequency(22);
-        radio.scrollingFrequencyLineOverUpperLimit();
+
+        radio.setActiveFrequency (55);
         int expected = 0;
         int actual = radio.getActiveFrequency();
-        Assertions.assertEquals(expected, actual);
+
+        Assertions.assertEquals(actual, expected);
     }
 
     @Test
-    void shouldScrollFrequencyDownInLimits(){
+    void shouldSetActiveFrequencyUnderLowerLimit() {
         Radio radio = new Radio();
+
+        radio.setActiveFrequency (-1);
+        int expected = 0;
+        int actual = radio.getActiveFrequency();
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldMoveToTheNextFrequency() {
+        Radio radio = new Radio();
+
+        radio.setActiveFrequency(6);
+        radio.nextFrequency();
+        int expected = 7;
+        int actual = radio.getActiveFrequency();
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldReturnFrequencyToTheFirstStep() {
+        Radio radio = new Radio();
+
+        radio.setActiveFrequency(9);
+        radio.nextFrequency();
+        int expected = 0;
+        int actual = radio.getActiveFrequency();
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldMoveToThePreviousFrequency() {
+        Radio radio = new Radio();
+
         radio.setActiveFrequency(7);
-        radio.scrollingFrequencyDownInLimits();
+        radio.previousFrequency();
         int expected = 6;
         int actual = radio.getActiveFrequency();
-        Assertions.assertEquals(expected,actual);
+
+        Assertions.assertEquals(actual, expected);
     }
 
     @Test
-    void shouldScrollFrequencyDownAtLowerLimit(){
+    void shouldMoveForwardToTheFinalStep() {
         Radio radio = new Radio();
-        radio.setActiveFrequency(-22);
-        radio.scrollingFrequencyDownAtLowerLimit();
+
+        radio.setActiveFrequency(0);
+        radio.previousFrequency();
         int expected = 9;
         int actual = radio.getActiveFrequency();
-        Assertions.assertEquals(expected,actual);
+
+        Assertions.assertEquals(actual, expected);
     }
 
     @Test
-    void shouldScrollVolumeUpInLimits(){
+    void shouldSetActiveVolume() {
         Radio radio = new Radio();
-        radio.setActiveVolume(7);
-        radio.scrollingVolumeUpInLimits();
-        int expected = 8;
+
+        radio.setActiveVolume (5);
+        int expected = 5;
         int actual = radio.getActiveVolume();
-        Assertions.assertEquals(expected,actual);
+
+        Assertions.assertEquals(actual, expected);
     }
 
     @Test
-    void shouldControlVolumeLineOverUpperLimit() {
+    void shouldSetActiveVolumeUnderLowerLimit() {
         Radio radio = new Radio();
-        radio.setActiveVolume(22);
-        radio.scrollingVolumeLineOverUpperLimit();
-        int expected = 10;
-        int actual = radio.getActiveVolume();
-        Assertions.assertEquals(expected, actual);
-    }
 
-    @Test
-    void shouldScrollVolumeDownInLimits(){
-        Radio radio = new Radio();
-        radio.setActiveVolume(7);
-        radio.scrollingVolumeDownInLimits();
-        int expected = 6;
-        int actual = radio.getActiveVolume();
-        Assertions.assertEquals(expected,actual);
-    }
-
-    @Test
-    void shouldScrollVolumeDownAtLowerLimit(){
-        Radio radio = new Radio();
-        radio.setActiveVolume(-22);
-        radio.scrollingVolumeDownAtLowerLimit();
+        radio.setActiveVolume (-1);
         int expected = 0;
         int actual = radio.getActiveVolume();
-        Assertions.assertEquals(expected,actual);
+
+        Assertions.assertEquals(actual, expected);
     }
 
+    @Test
+    void shouldSetActiveVolumeOverUpperLimit() {
+        Radio radio = new Radio();
+
+        radio.setActiveVolume(22);
+        int expected = 0;
+        int actual = radio.getActiveVolume();
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldTurnUpActiveVolume() {
+        Radio radio = new Radio();
+
+        radio.setActiveVolume(7);
+        radio.turningActiveVolumeUp();
+        int expected = 8;
+        int actual = radio.getActiveVolume();
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldStopTurningActiveVolumeUpInUpperLimit() {
+        Radio radio = new Radio();
+
+        radio.setActiveVolume(10);
+        radio.turningActiveVolumeUp();
+        int expected = 10;
+        int actual = radio.getActiveVolume();
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldDownGradeActiveVolume() {
+        Radio radio = new Radio();
+
+        radio.setActiveVolume(3);
+        radio.downGradingActiveVolume();
+        int expected = 2;
+        int actual = radio.getActiveVolume();
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldStopDownGradingActiveVolumeInLowerLimit() {
+        Radio radio = new Radio();
+
+        radio.setActiveVolume(0);
+        radio.downGradingActiveVolume();
+        int expected = 0;
+        int actual = radio.getActiveVolume();
+
+        Assertions.assertEquals(actual, expected);
+    }
 }
