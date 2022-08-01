@@ -1,15 +1,22 @@
 package ru.netology.javaqa;
 
 public class Radio {
-    private int activeFrequency;
+    private int activeStation;
     private int activeVolume;
-    private final int numberOfFrequencies = 9;
-    private final int numberOfVolumeSteps = 10;
+    private final int numberOfVolumeSteps = 100;
     private int firstStep = 0;
+    private int amountOfStations = 10;
 
-    public int getActiveFrequency() {
+    public Radio(int amountOfStations) {
+        this.amountOfStations = amountOfStations;
+    }
 
-        return activeFrequency;
+    public Radio() {
+    }
+
+    public int getActiveStation() {
+
+        return activeStation;
 
     }
 
@@ -18,34 +25,35 @@ public class Radio {
         return activeVolume;
 
     }
-    public void setActiveFrequency(int activeFrequency) {
-        if (activeFrequency < firstStep) {
+
+    public void setActiveStation(int activeStation) {
+        if (activeStation <= firstStep+1) {
             return;
         }
-        if (activeFrequency > numberOfFrequencies) {
+        if (activeStation > amountOfStations - 1) {
             return;
         }
-        this.activeFrequency = activeFrequency;
+        this.activeStation = activeStation;
     }
 
-    public void nextFrequency() {
-        if (activeFrequency >= numberOfFrequencies) {
-            setActiveFrequency(firstStep);
+    public void nextStation() {
+        if (activeStation >= amountOfStations - 1) {
+            setActiveStation(firstStep);
         } else {
-            setActiveFrequency(activeFrequency = activeFrequency + 1);
+            setActiveStation(activeStation + 1);
         }
     }
 
-    public void previousFrequency() {
-        if (activeFrequency <= firstStep) {
-            setActiveFrequency(numberOfFrequencies);
+    public void previousStation() {
+        if (activeStation <= firstStep+1) {
+            setActiveStation(amountOfStations-1);
         } else {
-            setActiveFrequency(activeFrequency = activeFrequency - 1);
+            setActiveStation(activeStation-1);
         }
     }
 
     public void setActiveVolume(int activeVolume) {
-        if (activeVolume < firstStep) {
+        if (activeVolume <= firstStep) {
             return;
         }
         if (activeVolume > numberOfVolumeSteps) {

@@ -6,117 +6,129 @@ import org.junit.jupiter.api.Test;
 public class RadioTests {
 
     @Test
-    void shouldSetActiveFrequency() {
+    void shouldSetActiveStationInConstructor() {
+        Radio radio = new Radio(85);
+
+        radio.setActiveStation(84);
+        int expected = 84;
+        int actual = radio.getActiveStation();
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+
+    @Test
+    void shouldSetActiveStation() {
         Radio radio = new Radio();
 
-        radio.setActiveFrequency (5);
+        radio.setActiveStation(5);
         int expected = 5;
-        int actual = radio.getActiveFrequency();
+        int actual = radio.getActiveStation();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    void shouldSetActiveFrequencyOverUpperLimit() {
+    void shouldSetActiveStationOverUpperLimit() {
         Radio radio = new Radio();
 
-        radio.setActiveFrequency (55);
+        radio.setActiveStation(11);
         int expected = 0;
-        int actual = radio.getActiveFrequency();
+        int actual = radio.getActiveStation();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    void shouldSetActiveFrequencyUnderLowerLimit() {
+    void shouldSetActiveStationUnderLowerLimit() {
         Radio radio = new Radio();
 
-        radio.setActiveFrequency (-1);
+        radio.setActiveStation(-1);
         int expected = 0;
-        int actual = radio.getActiveFrequency();
+        int actual = radio.getActiveStation();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    void shouldMoveToTheNextFrequency() {
+    void shouldMoveToTheNextStation() {
         Radio radio = new Radio();
 
-        radio.setActiveFrequency(6);
-        radio.nextFrequency();
+        radio.setActiveStation(6);
+        radio.nextStation();
         int expected = 7;
-        int actual = radio.getActiveFrequency();
+        int actual = radio.getActiveStation();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    void shouldReturnFrequencyToTheFirstStep() {
+    void shouldReturnStationToTheFirstStation() {
         Radio radio = new Radio();
 
-        radio.setActiveFrequency(9);
-        radio.nextFrequency();
+        radio.setActiveStation(10);
+        radio.nextStation();
         int expected = 0;
-        int actual = radio.getActiveFrequency();
+        int actual = radio.getActiveStation();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    void shouldMoveToThePreviousFrequency() {
+    void shouldMoveStationBackToThePreviousStation() {
         Radio radio = new Radio();
 
-        radio.setActiveFrequency(7);
-        radio.previousFrequency();
+        radio.setActiveStation(7);
+        radio.previousStation();
         int expected = 6;
-        int actual = radio.getActiveFrequency();
+        int actual = radio.getActiveStation();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    void shouldMoveForwardToTheFinalStep() {
+    void shouldMoveStationForwardToTheFinalStep() {
         Radio radio = new Radio();
 
-        radio.setActiveFrequency(0);
-        radio.previousFrequency();
+        radio.setActiveStation(0);
+        radio.previousStation();
         int expected = 9;
-        int actual = radio.getActiveFrequency();
+        int actual = radio.getActiveStation();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
     void shouldSetActiveVolume() {
         Radio radio = new Radio();
 
-        radio.setActiveVolume (5);
+        radio.setActiveVolume(5);
         int expected = 5;
         int actual = radio.getActiveVolume();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
     void shouldSetActiveVolumeUnderLowerLimit() {
         Radio radio = new Radio();
 
-        radio.setActiveVolume (-1);
+        radio.setActiveVolume(-1);
         int expected = 0;
         int actual = radio.getActiveVolume();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
     void shouldSetActiveVolumeOverUpperLimit() {
         Radio radio = new Radio();
 
-        radio.setActiveVolume(22);
+        radio.setActiveVolume(155);
         int expected = 0;
         int actual = radio.getActiveVolume();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
@@ -128,19 +140,19 @@ public class RadioTests {
         int expected = 8;
         int actual = radio.getActiveVolume();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
     void shouldStopTurningActiveVolumeUpInUpperLimit() {
         Radio radio = new Radio();
 
-        radio.setActiveVolume(10);
+        radio.setActiveVolume(100);
         radio.turningActiveVolumeUp();
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getActiveVolume();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
@@ -152,7 +164,7 @@ public class RadioTests {
         int expected = 2;
         int actual = radio.getActiveVolume();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
@@ -164,6 +176,6 @@ public class RadioTests {
         int expected = 0;
         int actual = radio.getActiveVolume();
 
-        Assertions.assertEquals(actual, expected);
+        Assertions.assertEquals(expected,actual);
     }
 }
