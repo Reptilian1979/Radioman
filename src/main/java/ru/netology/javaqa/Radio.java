@@ -1,9 +1,17 @@
 package ru.netology.javaqa;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Radio {
     private int activeStation;
     private int activeVolume;
-    private final int numberOfVolumeSteps = 100;
+    private int numberOfVolumeSteps = 100;
     private int firstStep = 0;
     private int amountOfStations = 10;
 
@@ -13,19 +21,12 @@ public class Radio {
         this.numberOfStations = numberOfStations;
     }
 
-    public Radio() {
-    }
-
     public int getActiveStation() {
-
         return activeStation;
-
     }
 
     public int getActiveVolume() {
-
         return activeVolume;
-
     }
 
     public void setActiveStation(int activeStation) {
@@ -53,6 +54,7 @@ public class Radio {
             setActiveStation(activeStation - 1);
         }
     }
+
 
     public void setActiveVolume(int activeVolume) {
         if (activeVolume <= firstStep) {

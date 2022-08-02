@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="023102e9-f34c-41e9-a74f-38ca3bc93a02" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/javaqa/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/javaqa/Radio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/javaqa/RadioTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/javaqa/RadioTests.java" afterDir="false" />
     </list>
@@ -18,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -35,14 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/madan/IdeaProjects/Radioman/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/madan/IdeaProjects/Post&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_directory_selection": "C:/Users/madan/IdeaProjects/Radioman/src/main/java",
+    "last_opened_file_path": "C:/Users/madan/IdeaProjects/Post",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.netology.javaqa" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean test" />
@@ -50,7 +63,7 @@
       <command value="mvn site" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RadioTests">
+  <component name="RunManager" selected="JUnit.RadioTestsTest">
     <configuration name="RadioTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
@@ -66,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTests.shouldReturnStationToTheFirstStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTestsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -75,9 +88,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
-      <option name="METHOD_NAME" value="shouldReturnStationToTheFirstStation" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTestsTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RadioTestsTest" />
         <item itemvalue="JUnit.RadioTests" />
         <item itemvalue="JUnit.RadioTests.shouldSetActiveStationUnderLowerLimit" />
         <item itemvalue="JUnit.RadioTests.shouldSetActiveStationOverUpperLimit" />
         <item itemvalue="JUnit.RadioTests.shouldSetLastStation" />
-        <item itemvalue="JUnit.RadioTests.shouldReturnStationToTheFirstStation" />
       </list>
     </recent_temporary>
   </component>

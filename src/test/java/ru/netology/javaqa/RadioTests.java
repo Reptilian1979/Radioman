@@ -3,8 +3,9 @@ package ru.netology.javaqa;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class RadioTests {
+import static org.junit.jupiter.api.Assertions.*;
 
+class RadioTestsTest {
     @Test
     void shouldSetActiveStationInConstructor() {
         Radio radio = new Radio(85);
