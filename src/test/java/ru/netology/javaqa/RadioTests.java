@@ -32,7 +32,7 @@ public class RadioTests {
     void shouldSetActiveStationOverUpperLimit() {
         Radio radio = new Radio();
 
-        radio.setActiveStation(11);
+        radio.setActiveStation(15);
         int expected = 0;
         int actual = radio.getActiveStation();
 
@@ -43,7 +43,7 @@ public class RadioTests {
     void shouldSetActiveStationUnderLowerLimit() {
         Radio radio = new Radio();
 
-        radio.setActiveStation(-1);
+        radio.setActiveStation(-10);
         int expected = 0;
         int actual = radio.getActiveStation();
 
@@ -63,12 +63,24 @@ public class RadioTests {
     }
 
     @Test
-    void shouldReturnStationToTheFirstStation() {
+    void shouldReturnFromLastStationToTheFirstStation() {
         Radio radio = new Radio();
 
-        radio.setActiveStation(10);
+        radio.setActiveStation(9);
         radio.nextStation();
         int expected = 0;
+        int actual = radio.getActiveStation();
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    void shouldSetLastStation(){
+        Radio radio = new Radio();
+
+        radio.setActiveStation(8);
+        radio.nextStation();
+        int expected = 9;
         int actual = radio.getActiveStation();
 
         Assertions.assertEquals(expected,actual);
@@ -87,7 +99,7 @@ public class RadioTests {
     }
 
     @Test
-    void shouldMoveStationForwardToTheFinalStep() {
+    void shouldMoveStationForwardFromFirstToTheLast() {
         Radio radio = new Radio();
 
         radio.setActiveStation(0);

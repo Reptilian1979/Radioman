@@ -50,7 +50,7 @@
       <command value="mvn site" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RadioTests.shouldReturnStationToTheFirstStation">
+  <component name="RunManager" selected="JUnit.RadioTests">
     <configuration name="RadioTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
@@ -82,22 +82,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTests.shouldReturnStationToTheFirstStep" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Radioman" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.javaqa.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
-      <option name="METHOD_NAME" value="shouldReturnStationToTheFirstStep" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RadioTests.shouldSetActiveStationOverUpperLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
@@ -114,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTests.shouldTestSettingOfActiveStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTests.shouldSetActiveStationUnderLowerLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -124,7 +108,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
-      <option name="METHOD_NAME" value="shouldTestSettingOfActiveStation" />
+      <option name="METHOD_NAME" value="shouldSetActiveStationUnderLowerLimit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioTests.shouldSetLastStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Radioman" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.javaqa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.javaqa" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.RadioTests" />
+      <option name="METHOD_NAME" value="shouldSetLastStation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RadioTests.shouldReturnStationToTheFirstStation" />
         <item itemvalue="JUnit.RadioTests" />
-        <item itemvalue="JUnit.RadioTests.shouldReturnStationToTheFirstStep" />
+        <item itemvalue="JUnit.RadioTests.shouldSetActiveStationUnderLowerLimit" />
         <item itemvalue="JUnit.RadioTests.shouldSetActiveStationOverUpperLimit" />
-        <item itemvalue="JUnit.RadioTests.shouldTestSettingOfActiveStation" />
+        <item itemvalue="JUnit.RadioTests.shouldSetLastStation" />
+        <item itemvalue="JUnit.RadioTests.shouldReturnStationToTheFirstStation" />
       </list>
     </recent_temporary>
   </component>

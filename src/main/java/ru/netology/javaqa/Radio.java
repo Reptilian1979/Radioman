@@ -7,8 +7,10 @@ public class Radio {
     private int firstStep = 0;
     private int amountOfStations = 10;
 
-    public Radio(int amountOfStations) {
-        this.amountOfStations = amountOfStations;
+    private int numberOfStations = amountOfStations - 1;
+
+    public Radio(int numberOfStations) {
+        this.numberOfStations = numberOfStations;
     }
 
     public Radio() {
@@ -27,17 +29,17 @@ public class Radio {
     }
 
     public void setActiveStation(int activeStation) {
-        if (activeStation <= firstStep+1) {
+        if (activeStation < firstStep) {
             return;
         }
-        if (activeStation > amountOfStations - 1) {
+        if (activeStation > numberOfStations) {
             return;
         }
         this.activeStation = activeStation;
     }
 
     public void nextStation() {
-        if (activeStation >= amountOfStations - 1) {
+        if (activeStation >= numberOfStations) {
             setActiveStation(firstStep);
         } else {
             setActiveStation(activeStation + 1);
@@ -45,10 +47,10 @@ public class Radio {
     }
 
     public void previousStation() {
-        if (activeStation <= firstStep+1) {
-            setActiveStation(amountOfStations-1);
+        if (activeStation <= firstStep) {
+            setActiveStation(numberOfStations);
         } else {
-            setActiveStation(activeStation-1);
+            setActiveStation(activeStation - 1);
         }
     }
 
