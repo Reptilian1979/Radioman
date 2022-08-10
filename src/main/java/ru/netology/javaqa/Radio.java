@@ -21,14 +21,6 @@ public class Radio {
         this.numberOfStations = numberOfStations;
     }
 
-    public int getActiveStation() {
-        return activeStation;
-    }
-
-    public int getActiveVolume() {
-        return activeVolume;
-    }
-
     public void setActiveStation(int activeStation) {
         if (activeStation < firstStep) {
             return;
